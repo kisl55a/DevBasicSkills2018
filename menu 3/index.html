@@ -12,10 +12,10 @@
   <div class="flexbox">
     <button class="tablink" onclick="openPage('Main_page', this, 'lightgray')">Main page</button>
     <button class="tablink" onclick="openPage('Converter', this, 'lightgray')" id="defaultOpen">Converter</button>
-    <button class="tablink" onclick="openPage('Number_system_outputs', this, 'lightgray')">Factorials</button>
+    <button class="tablink" onclick="openPage('Number_system_outputs', this, 'lightgray')">Number system</button>
     <button class="tablink" onclick="openPage('Combinatorics', this, 'lightgray')">Combinatorics</button>
     <button class="tablink" onclick="openPage('Truth_tables', this, 'lightgray')">Tables</button>
-    <button class="tablink" onclick="openPage('Random values', this, 'lightgray')">Number system </button>
+    <button class="tablink" onclick="openPage('Random values', this, 'lightgray')">Random values </button>
     <button class="tablink" onclick="openPage('Game', this, 'lightgray')">Game</button>
     <button class="tablink" onclick="openPage('About_us', this, 'lightgray')">About us</button>
   </div>
@@ -38,7 +38,7 @@
       Input here your number 
     <input type="text" id="firstNumber" name="Input number" value="" placeholder="123"> <br>
     Enter the number system of your number 
-    <input type="number" min="2" max="16" id="startSystem" name="system" value="3" placeholder="2"> <br>
+    <input type="number" min="2" max="16" id="startSystem" name="system" value="10" placeholder="2"> <br>
     Enter the final number base system
     <input type="number" min="2" max="16" id="finalSystem" name="system" value="16" placeholder="16"> <br>
     <button type="button" name="button"  onclick="convertion()">Go</button>
@@ -46,8 +46,25 @@
     </div>
     
     <div id="Number_system_outputs" class="tabcontent">
-      <h3>Contact</h3>
-      <p>Get in touch, or swing by for a cup of coffee.</p>
+      <h3>System outputs</h3>
+      
+          <button type="button" name="button" id="checkButton"  onclick="turnOn()">Show</button>
+          <div id="table" class="table">
+<script language="JavaScript" class="tableContent" > 
+
+document.write("<h1>Table of number systems</h1>"); 
+ document.write("<table class='tableContent'> <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hexidecimal</th></tr>")
+for (i = 1; i <51; i++)  
+{ 
+document.write( "<tr><th>"+table(i,10)+"</th><th>   "+table(i,2) + "</th><th>    " + table(i,8) + "</th><th>    " +table(i,16) + "</th></tr> "); 
+ 
+}  
+document.write ("</table>"); 
+document.write ("</div>"); 
+
+ </script> 
+</div>
+
     </div>
     
     <div id="Combinatorics" class="tabcontent">
@@ -56,8 +73,8 @@
     </div>
     
       <div id="Truth_tables" class="tabcontent">
-        <h3>About</h3>
-        <p>Who we are and what we do.</p>
+        <h3>Tables</h3>
+      
       </div>
       <div id="Random values" class="tabcontent">
         <h3>About</h3>

@@ -12,6 +12,8 @@ body, html {
     float: left;
     border: rgb(240, 232, 232);
     outline: none;
+    border: 2px;
+    border-color: black;
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
@@ -24,6 +26,7 @@ body, html {
   
   /* Style the tab content (and add height:100% for full page content) */
   .tabcontent {
+    background-color: rgba(85, 85, 85, 0.137);
     color: black;
     display: none;
     padding: 100px 20px;
@@ -42,6 +45,18 @@ body, html {
     width: 50%;
     float: right;
   }
+  .table
+  {
+    visibility: hidden;
+  }
+  .tableContent
+  {
+   
+    font-size: 120%;
+    width: 50%;
+    position: relative;
+    left: 500 px;
+   }
 @media (max-width: 1000px)
 {
     .flexbox
