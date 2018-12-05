@@ -26,6 +26,13 @@ function convertion()
     var number= document.getElementById("firstNumber").value;
     var finalSystem= Number(document.getElementById("finalSystem").value);
     var startSystem = Number(document.getElementById("startSystem").value);
+    if ((startSystem<2)||(finalSystem>16))
+    {
+        str2="Wrong number system";
+        document.getElementById('info').innerHTML=str2;
+    }
+else
+{
    if (startSystem==10)
     {
     c=number;
@@ -166,4 +173,5 @@ else
 }
 }
 
+}
 }

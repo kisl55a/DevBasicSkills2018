@@ -10,7 +10,7 @@ body, html {
     background-color: #555;
     color: white;
     float: left;
-    border: none;
+    border: rgb(240, 232, 232);
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
@@ -42,7 +42,35 @@ body, html {
     width: 50%;
     float: right;
   }
+@media (max-width: 1000px)
+{
+    .flexbox
+    { 
+      display: flex;
+        width: 100%;
+        flex-wrap: wrap;
 
+    }
+    .tablink {
+      background-color: #555;
+      color: white;
+      
+      border: rgb(240, 232, 232);
+      outline: none;
+      cursor: pointer;
+    
+      font-size: 10px;
+      width: 25%;
+    }
+    .tabcontent {
+      color: black;
+      display: none;
+      padding: 0px 20px;
+      height: 100%;
+    }
+    
+ 
+}
   #Home {background-color: white;}
   #News {background-color: white;}
   #Contact {background-color: white;}
