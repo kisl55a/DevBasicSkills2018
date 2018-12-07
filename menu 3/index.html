@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <script src="combinatorics.js"></script>
 </head>
+
 <body>
   <div class="flexbox">
     <button class="tablink" onclick="openPage('Main_page', this, 'lightgray')">Main page</button>
@@ -19,74 +22,106 @@
     <button class="tablink" onclick="openPage('Game', this, 'lightgray')">Game</button>
     <button class="tablink" onclick="openPage('About_us', this, 'lightgray')">About us</button>
   </div>
-    <div id="Main_page" class="tabcontent">
-      <div>
-        <div class="mainwords">
-        <h3 >Hello!</h3>
-       This is a main page of our site.
-        This site includes a lot of different interesting mathematics things </div>
-        <div > <img  class="pic1" src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/alittlefunwi.jpg" alt=""></div>
+  <div id="Main_page" class="tabcontent">
+    <div>
+      <div class="mainwords">
+        <h3>Hello!</h3>
+        This is a main page of our site.
+        This site includes a lot of different interesting mathematics things
       </div>
-
-     
-    
+      <div> <img class="pic1" src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/alittlefunwi.jpg"
+          alt=""></div>
     </div>
-    
-    <div id="Converter" class="tabcontent">
-      <h3>Converter program</h3>
-        This program can convert numbers where you can choose from which number system to which you need to convert the number 
-      Input here your number 
+
+
+
+  </div>
+
+  <div id="Converter" class="tabcontent">
+    <h3>Converter program</h3>
+    This program can convert numbers where you can choose from which number system to which you need to convert the
+    number
+    Input here your number
     <input type="text" id="firstNumber" name="Input number" value="" placeholder="123"> <br>
-    Enter the number system of your number 
+    Enter the number system of your number
     <input type="number" min="2" max="16" id="startSystem" name="system" value="10" placeholder="2"> <br>
     Enter the final number base system
     <input type="number" min="2" max="16" id="finalSystem" name="system" value="16" placeholder="16"> <br>
-    <button type="button" name="button"  onclick="convertion()">Go</button>
+    <button type="button" name="button" onclick="convertion()">Go</button>
     <div id="info"></div>
-    </div>
-    
-    <div id="Number_system_outputs" class="tabcontent">
-      <h3>System outputs</h3>
-      
-          <button type="button" name="button" id="checkButton"  onclick="turnOn()">Show</button>
-          <div id="table" class="table">
-<script language="JavaScript" class="tableContent" > 
+  </div>
 
-document.write("<h1>Table of number systems</h1>"); 
- document.write("<table class='tableContent'> <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hexidecimal</th></tr>")
-for (i = 1; i <51; i++)  
-{ 
-document.write( "<tr><th>"+table(i,10)+"</th><th>   "+table(i,2) + "</th><th>    " + table(i,8) + "</th><th>    " +table(i,16) + "</th></tr> "); 
- 
-}  
-document.write ("</table>"); 
-document.write ("</div>"); 
+  <div id="Number_system_outputs" class="tabcontent">
+    <h3>System outputs</h3>
 
- </script> 
-</div>
+    <button type="button" name="button" id="checkButton" onclick="turnOn()">Show</button>
+    <div id="table" class="table">
+      <script language="JavaScript" class="tableContent">
 
+        document.write("<h1>Table of number systems</h1>");
+        document.write("<table class='tableContent'> <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hexidecimal</th></tr>")
+        for (i = 1; i < 51; i++) {
+          document.write("<tr><th>" + table(i, 10) + "</th><th>   " + table(i, 2) + "</th><th>    " + table(i, 8) + "</th><th>    " + table(i, 16) + "</th></tr> ");
+
+        }
+        document.write("</table>");
+        document.write("</div>");
+
+      </script>
     </div>
+
+  </div>
+
+  <div id="Combinatorics" class="tabcontent">
+    <h3>Combinatorics</h3>
+   
+   
     
-    <div id="Combinatorics" class="tabcontent">
-      <h3>About</h3>
-      <p>Who we are and what we do.</p>
+   <div>
+      <div class="comb">
+          <button type="button" name="button" id="combinatoricsButton" onclick="combinatorics()">Show</button>
+          <select name="combinatorics" id="combinatoricsSel">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+          </select>
+        
+        <div id="combinatoricsOutput"></div>
+        </div>
+     
+     <div class="allVar"> 
+        <button type="button" name="button" id="allVarButton" onclick="allVariants()">Show</button>
+          <select name="combinatorics" id="allVarVariants">
+            
+              <option value="4">4</option>
+              <option value="5">5</option>
+          
+          </select>
+    <div id="allVarOutput"></div></div>
     </div>
-    
-      <div id="Truth_tables" class="tabcontent">
-        <h3>Tables</h3>
-      
-      </div>
-      <div id="Random values" class="tabcontent">
-        <h3>About</h3>
-        <p>Who we are and what we do.</p>
-      </div>
-      <div id="Game" class="tabcontent">
-        <h3>About</h3>
-        <p>Who we are and what we do.</p>
-      </div>
-      <div id="About_us" class="tabcontent">
-        <h3>About</h3>
-        <p>Who we are and what we do.</p>
-      </div>
+  </div>
+  
+
+  <div id="Truth_tables" class="tabcontent">
+    <h3>Tables</h3>
+
+  </div>
+  <div id="Random values" class="tabcontent">
+    <h3>About</h3>
+    <p>Who we are and what we do.</p>
+  </div>
+  <div id="Game" class="tabcontent">
+    <h3>About</h3>
+    <p>Who we are and what we do.</p>
+  </div>
+  <div id="About_us" class="tabcontent">
+    <h3>About</h3>
+    <p>Who we are and what we do.</p>
+  </div>
 </body>
+
 </html>
