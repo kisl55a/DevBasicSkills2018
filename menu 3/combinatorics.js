@@ -4,6 +4,8 @@ function combinatorics() {
     var final = [];
     var out = (' ');
     var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+    if (a!=0)
+    {
 
     for (i = 1; i <= ((2 ** a) - 1); i++) {
         b = i.toString(2)
@@ -14,25 +16,18 @@ function combinatorics() {
             farr = farr + ")";
             final.push(farr);
         }
-
-        /*if ((i%5)!=0)
-        {   if (i<(2**a)-1)
-          {out="  "+out+farr+" ) (  ";} else
-          out="  "+out+farr+" )   ";
-        }
-        else 
-        { if (i<(2**a)-1)
-          {  out="    "+out+farr+" ) <br>( ";}
-          else
-          {out="    "+out+farr+" )  <br> ";
-           }
-        }*/
-        document.getElementById('combinatoricsOutput').innerHTML = final;
     }
+
+    }
+    else
+    { final=" "}
+        document.getElementById('combinatoricsOutput').innerHTML = final;
+   
 }
 function allVariants() {
     i = Number(document.getElementById("allVarVariants").value);
-
+if (i!=0)
+{
 
     if (i == 4) {
         var a, b, c, d, s = [];
@@ -79,6 +74,46 @@ function allVariants() {
                 };
             };
         }
-    }
-    document.getElementById('allVarOutput').innerHTML = s.join('\n');
+   }
+   document.getElementById('allVarOutput').innerHTML = s.join('\n');
 }
+else
+{
+    document.getElementById('allVarOutput').innerHTML = (' ');
+}
+}
+
+function Fact(number) {
+
+    var value = number;
+
+    for (var i = number; i > 1; i--)
+
+        value *= i - 1;
+
+    return value;
+
+};
+
+
+
+function nCr()
+{ i = Number(document.getElementById("calculatorSel").value);
+if (i==0)
+{
+    var n = document.getElementById("n").value;
+    var k = document.getElementById("k").value;
+    var l=n-k;
+    var sum= Fact(n)/Fact(l)
+}
+else
+{
+    var n = document.getElementById("n").value;
+    var k = document.getElementById("k").value;
+    var l=n-k;
+    var sum= Fact(n)/(Fact(k)*Fact(l))
+}
+
+    document.getElementById('calculatorOutput').innerHTML=sum;
+}
+

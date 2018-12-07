@@ -13,8 +13,8 @@
 
 <body>
   <div class="flexbox">
-    <button class="tablink" onclick="openPage('Main_page', this, 'lightgray')">Main page</button>
-    <button class="tablink" onclick="openPage('Converter', this, 'lightgray')" id="defaultOpen">Converter</button>
+    <button class="tablink" onclick="openPage('Main_page', this, 'lightgray')" id="defaultOpen">Main page</button>
+    <button class="tablink" onclick="openPage('Converter', this, 'lightgray')">Converter</button>
     <button class="tablink" onclick="openPage('Number_system_outputs', this, 'lightgray')">Number system</button>
     <button class="tablink" onclick="openPage('Combinatorics', this, 'lightgray')">Combinatorics</button>
     <button class="tablink" onclick="openPage('Truth_tables', this, 'lightgray')">Tables</button>
@@ -78,9 +78,22 @@
    
     
    <div>
-      <div class="comb">
+     <h3>Lists calcullator</h3>
+     
+     <div> <select name="calculator" id="calculatorSel">
+        <option value="0">Ordered</option>
+        <option value="1">Not ordered</option><br>
+        <input type="number" min="1" max="30" id="n" name="system" value="4" placeholder="2">
+        <input type="number" min="1" max="30" id="k" name="system" value="2" placeholder="2">
+     </select>
+     <button type="button" name="button" id="calculatorButton" onclick="nCr()">Count</button>
+    </div><br>
+     <div id="calculatorOutput"></div>
+     <h3>Sets</h3>
+      <div class="comb"> 
           <button type="button" name="button" id="combinatoricsButton" onclick="combinatorics()">Show</button>
           <select name="combinatorics" id="combinatoricsSel">
+              <option value="0">0</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -96,7 +109,7 @@
      <div class="allVar"> 
         <button type="button" name="button" id="allVarButton" onclick="allVariants()">Show</button>
           <select name="combinatorics" id="allVarVariants">
-            
+              <option value="0">0</option>
               <option value="4">4</option>
               <option value="5">5</option>
           
@@ -123,5 +136,5 @@
     <p>Who we are and what we do.</p>
   </div>
 </body>
-
+<script src="main.js"></script>
 </html>
