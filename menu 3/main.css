@@ -1,120 +1,147 @@
 /* Set height of body and the document to 100% to enable "full page tabs" */
+
 body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial;
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+h3 {
+  margin: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* Style tab links */
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: rgb(240, 232, 232);
+  outline: none;
+  border: 2px;
+  border-color: black;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+#combinatoricsOutput {
+  font-size: 100%;
+  width: 50%;
+  height: 100%;
+}
+
+#allVarOutput {
+  font-size: 100%;
+}
+
+.allVar {
+  font-size: 100%;
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+
+.tabcontent {
+  background-color: rgba(85, 85, 85, 0.137);
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+.mainwords {
+  font-size: 200%;
+  height: 50%;
+  width: 50%;
+  float: left;
+}
+
+.pic1 {
+  height: 50%;
+  width: 50%;
+  float: right;
+}
+
+.table {
+  visibility: hidden;
+}
+
+.tableContent {
+  font-size: 120%;
+  width: 50%;
+  position: relative;
+  left: 500 px;
+}
+
+.comb {
+  width: 50%;
+  float: left;
+}
+.gamePlace
+{
+  visibility:hidden;
+
+}
+@media (max-width: 1000px) {
+  .flexbox {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
   }
-  h3
-  {
-   margin: 0;
-   padding-top: 2%;
-   padding-bottom: 2%; 
-  }
-  /* Style tab links */
   .tablink {
     background-color: #555;
     color: white;
-    float: left;
     border: rgb(240, 232, 232);
     outline: none;
-    border: 2px;
-    border-color: black;
     cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
+    font-size: 10px;
     width: 25%;
   }
-  #combinatoricsOutput
-  {
-font-size: 100%;
-width: 50%;
-height: 100%;
-  }
-  #allVarOutput
-  {
-font-size: 100%;
-
-  }
-  .allVar
-  {
-font-size: 100%;
-width: 50%;
-height: 100%;
-float:right;
-  }
-  
-  .tablink:hover {
-    background-color: #777;
-  }
-  
-  /* Style the tab content (and add height:100% for full page content) */
   .tabcontent {
-    background-color: rgba(85, 85, 85, 0.137);
     color: black;
     display: none;
-    padding: 100px 20px;
+    padding: 0px 20px;
     height: 100%;
   }
-  .mainwords
-  {
-      font-size: 200%;
-      height: 50%;
-       width: 50%;
-       float: left;
-  }
-  .pic1
-  {
-    height: 50%;
-    width: 50%;
-    float: right;
-  }
-  .table
-  {
-    visibility: hidden;
-  }
-  .tableContent
-  {
-   
-    font-size: 120%;
-    width: 50%;
-    position: relative;
-    left: 500 px;
-   }
-   .comb
-   {
-     width: 50%;
-     float: left;
-   }
-@media (max-width: 1000px)
-{
-    .flexbox
-    { 
-      display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-
-    }
-    .tablink {
-      background-color: #555;
-      color: white;
-      
-      border: rgb(240, 232, 232);
-      outline: none;
-      cursor: pointer;
-    
-      font-size: 10px;
-      width: 25%;
-    }
-    .tabcontent {
-      color: black;
-      display: none;
-      padding: 0px 20px;
-      height: 100%;
-    }
-    
- 
 }
-  #Home {background-color: white;}
-  #News {background-color: white;}
-  #Contact {background-color: white;}
-  #About {background-color: white;}
+.rand
+{
+  width: 50%;
+}
+.tableContentRandom
+{
+  font-size: 100%;
+  font-weight: normal;
+padding: 0px;
+ height: 30%;
+ width: 100%;
+}
+#valueRangeOutput
+{
+  font-size: 100%
+}
+#Home {
+  background-color: white;
+}
+
+#News {
+  background-color: white;
+}
+
+#Contact {
+  background-color: white;
+}
+
+#About {
+  background-color: white;
+}

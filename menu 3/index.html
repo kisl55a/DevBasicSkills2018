@@ -9,6 +9,9 @@
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   <script src="main.js"></script>
   <script src="combinatorics.js"></script>
+  <script src="random.js"></script>
+  <script src="number_system.js"></script>
+  <script src="game.js"></script>
 </head>
 
 <body>
@@ -74,62 +77,81 @@
 
   <div id="Combinatorics" class="tabcontent">
     <h3>Combinatorics</h3>
-   
-   
-    
-   <div>
-     <h3>Lists calcullator</h3>
-     
-     <div> <select name="calculator" id="calculatorSel">
-        <option value="0">Ordered</option>
-        <option value="1">Not ordered</option><br>
-        <input type="number" min="1" max="30" id="n" name="system" value="4" placeholder="2">
-        <input type="number" min="1" max="30" id="k" name="system" value="2" placeholder="2">
-     </select>
-     <button type="button" name="button" id="calculatorButton" onclick="nCr()">Count</button>
-    </div><br>
-     <div id="calculatorOutput"></div>
-     <h3>Sets</h3>
-      <div class="comb"> 
-          <button type="button" name="button" id="combinatoricsButton" onclick="combinatorics()">Show</button>
-          <select name="combinatorics" id="combinatoricsSel">
-              <option value="0">0</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-          </select>
-        
+    <div>
+      <h3>Lists calcullator</h3>
+
+      <div> <select name="calculator" id="calculatorSel">
+          <option value="0">Ordered</option>
+          <option value="1">Not ordered</option><br>
+          <input type="number" min="1" max="100" id="n" name="system" value="4" placeholder="2">
+          <input type="number" min="1" max="100" id="k" name="system" value="2" placeholder="2">
+        </select>
+        <button type="button" name="button" id="calculatorButton" onclick="nCr()">Count</button>
+      </div><br>
+      <div id="calculatorOutput"></div>
+      <h3>Sets</h3>
+      <div class="comb">
+        <button type="button" name="button" id="combinatoricsButton" onclick="combinatorics()">Show</button>
+        <select name="combinatorics" id="combinatoricsSel">
+          <option value="0">0</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+
         <div id="combinatoricsOutput"></div>
-        </div>
-     
-     <div class="allVar"> 
+      </div>
+
+      <div class="allVar">
         <button type="button" name="button" id="allVarButton" onclick="allVariants()">Show</button>
-          <select name="combinatorics" id="allVarVariants">
-              <option value="0">0</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-          
-          </select>
-    <div id="allVarOutput"></div></div>
+        <select name="combinatorics" id="allVarVariants">
+          <option value="0">0</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+         </select>
+        <div id="allVarOutput"></div>
+      </div>
     </div>
   </div>
-  
+
 
   <div id="Truth_tables" class="tabcontent">
     <h3>Tables</h3>
 
   </div>
   <div id="Random values" class="tabcontent">
-    <h3>About</h3>
-    <p>Who we are and what we do.</p>
+    <h3>Random values</h3>
+    <div class="rand">
+      <p>Here you can see random values feature</p>
+      <input type="number" min="-100" max="100" id="firstRange" name="valueRange1" value="-5" placeholder="2">
+      <input type="number" min="-100" max="100" id="secondRange" name="valueRange2" value="10" placeholder="2"> <br>
+      <input type="number" min="-100" max="100" id="rangeLength" name="valueRange2" value="10" placeholder="2">
+      <button type="button" name="button" id="allVarButton" onclick="Random()">Show</button>
+
+      <div id="valueRangeOutput"></div>
+      <div id="Statistics"></div>
+    </div>
+
+
   </div>
   <div id="Game" class="tabcontent">
-    <h3>About</h3>
-    <p>Who we are and what we do.</p>
+    <h3>A small mathematical game </h3>
+    <button type="button" name="button" id="gameCheckButton"  onclick="turnGameOn()">Start</button>
+    <div id="gameLayout" class="gamePlace">Something here<br>
+      <div id="math"> </div><input type="number" id="answer" name="answer"  placeholder="">
+      <button type="button" name="button" id="pushTheAnswer" onclick="game()">Next</button>
+      <div id="comment"></div>
+    <!--<table>
+    <tr><th><button type="button" name="button1" id="gameButton1" onclick="">Start</button></th>
+    <th><button type="button" name="button2" id="gameButton2" onclick="">Start</button></th></tr>
+    <tr><th><button type="button" name="button3" id="gameButton3" onclick="">Start</button></th>
+    <th><button type="button" name="button4" id="gameButton4" onclick="">Start</button></th></tr>
+  </table> -->
+</div>
   </div>
   <div id="About_us" class="tabcontent">
     <h3>About</h3>
@@ -137,4 +159,9 @@
   </div>
 </body>
 <script src="main.js"></script>
+<script src="combinatorics.js"></script>
+<script src="random.js"></script>
+<script src="number_system.js"></script>
+<script src="game.js"></script>
+
 </html>
