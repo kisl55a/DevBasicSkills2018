@@ -82,14 +82,13 @@ h3 {
   position: relative;
   left: 500 px;
 }
-
 .comb {
   width: 50%;
   float: left;
 }
 .gamePlace
 {
-  visibility:hidden;
+  visibility:visible;
 
 }
 @media (max-width: 1000px) {
@@ -113,6 +112,12 @@ h3 {
     padding: 0px 20px;
     height: 100%;
   }
+  
+#combinatoricsOutput {
+  font-size: 70%;
+  width: 30%;
+  height: 50%;
+}
 }
 .rand
 {

@@ -13,8 +13,9 @@ function Random() {
     a = Number(document.getElementById("firstRange").value);
     b = Number(document.getElementById("secondRange").value);
     c = Number(document.getElementById("rangeLength").value);
-    var neg = 0, pos = 0, three = 0, five = 0, seven = 0, prime = 0;
+    var neg = 0, pos = 0, three = 0, five = 0, seven = 0, prime = 0,f=0;
     var output = " <h3>Random values:</h3>";
+    var l;
 
     var t = [];
     for (i = 0; i < c; i++) {
@@ -40,7 +41,23 @@ function Random() {
     k = k + ("<tr><th> Devided by 7</th><th>" + seven + "</th></tr>");
     k = k + ("<tr><th> Prime</th><th>" + prime + "</th></tr>");
     k = k + ("</table>");
+    l= ("<table border=1 class='tableContentRandom' > <h1>Devided values:</h1><tr><th>Number </th><th>How many times</th></tr>");
+    t.sort();
+    for(i=0;i<t.length;i++)
+    {
+      if (t[i]==t[i+1])
+      {
+          f++;
+      }
+      else
+      {
+        l = l + ("<tr><th>" +t[i]+"</th><th>" + (f+1)+ "</th></tr>");
+        f=0;
+      }
+    }
     document.getElementById("valueRangeOutput").innerHTML = output;
     document.getElementById("Statistics").innerHTML = k;
+    document.getElementById("devidedValues").innerHTML = l;
+
 
 }

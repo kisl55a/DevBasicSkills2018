@@ -2,6 +2,7 @@
 function combinatorics() {
     a = Number(document.getElementById("combinatoricsSel").value);
     var final = [];
+    var tab;
     var out = (' ');
     var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
     if (a != 0) {
@@ -19,7 +20,20 @@ function combinatorics() {
 
     }
     else { final = " " }
-    document.getElementById('combinatoricsOutput').innerHTML = final;
+    tab="<table class='combinatoricsTable'><tr>";
+    for (i=0;i<final.length;i++)
+    {
+       if ((i%4!=3)&&(i!=final.length-1))
+       {
+           tab=tab+"<th>"+final[i]+"</th>";
+       }
+       else
+       {
+           tab=tab+"<th>"+final[i]+"</th></tr><tr>";
+       }
+    }
+    tab=tab+"</table>"
+    document.getElementById('combinatoricsOutput').innerHTML = tab;
 
 }
 function allVariants() {

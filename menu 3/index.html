@@ -11,7 +11,7 @@
   <script src="combinatorics.js"></script>
   <script src="random.js"></script>
   <script src="number_system.js"></script>
-  <script src="game.js"></script>
+  <script src="prime.js"></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <button class="tablink" onclick="openPage('Combinatorics', this, 'lightgray')">Combinatorics</button>
     <button class="tablink" onclick="openPage('Truth_tables', this, 'lightgray')">Tables</button>
     <button class="tablink" onclick="openPage('Random values', this, 'lightgray')">Random values </button>
-    <button class="tablink" onclick="openPage('Game', this, 'lightgray')">Game</button>
+    <button class="tablink" onclick="openPage('Prime', this, 'lightgray')">Prime numbers</button>
     <button class="tablink" onclick="openPage('About_us', this, 'lightgray')">About us</button>
   </div>
   <div id="Main_page" class="tabcontent">
@@ -134,17 +134,18 @@
 
       <div id="valueRangeOutput"></div>
       <div id="Statistics"></div>
+      <div id="devidedValues"></div>
     </div>
 
 
   </div>
-  <div id="Game" class="tabcontent">
-    <h3>A small mathematical game </h3>
-    <button type="button" name="button" id="gameCheckButton"  onclick="turnGameOn()">Start</button>
-    <div id="gameLayout" class="gamePlace">Something here<br>
-      <div id="math"> </div><input type="number" id="answer" name="answer"  placeholder="">
-      <button type="button" name="button" id="pushTheAnswer" onclick="game()">Next</button>
-      <div id="comment"></div>
+  <div id="Prime" class="tabcontent">
+    <h3>Prime numbers </h3>
+   
+    <div id="primeNumbersLayout" class="primeNumberPlace"><br>
+    <input type="number" id="primeNumberRange" name="primeNumberRange"  placeholder=""> <br>
+    <button type="button" name="button" id="allVarButton" onclick="prime()">Show</button>
+      <div id="primeNumberPlace"> </div>
     <!--<table>
     <tr><th><button type="button" name="button1" id="gameButton1" onclick="">Start</button></th>
     <th><button type="button" name="button2" id="gameButton2" onclick="">Start</button></th></tr>
@@ -162,6 +163,6 @@
 <script src="combinatorics.js"></script>
 <script src="random.js"></script>
 <script src="number_system.js"></script>
-<script src="game.js"></script>
+<script src="prime.js"></script>
 
 </html>
