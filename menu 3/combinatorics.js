@@ -20,19 +20,16 @@ function combinatorics() {
 
     }
     else { final = " " }
-    tab="<table class='combinatoricsTable'><tr>";
-    for (i=0;i<final.length;i++)
-    {
-       if ((i%4!=3)&&(i!=final.length-1))
-       {
-           tab=tab+"<th>"+final[i]+"</th>";
-       }
-       else
-       {
-           tab=tab+"<th>"+final[i]+"</th></tr><tr>";
-       }
+    tab = "<table class='combinatoricsTable'><tr>";
+    for (i = 0; i < final.length; i++) {
+        if ((i % 4 != 3) && (i != final.length - 1)) {
+            tab = tab + "<th>" + final[i] + "</th>";
+        }
+        else {
+            tab = tab + "<th>" + final[i] + "</th></tr><tr>";
+        }
     }
-    tab=tab+"</table>"
+    tab = tab + "</table>"
     document.getElementById('combinatoricsOutput').innerHTML = tab;
 
 }
@@ -113,27 +110,47 @@ function nCr() {
     var k = document.getElementById("k").value;
 
     if (i == 0) {
-
-        var l = n - k;
-        var sum = Fact(n) / Fact(l)
+        if (n == k) {
+            var sum = Fact(n)
+        }
+        else {
+            var l = n - k;
+            var sum = Fact(n) / Fact(l)
+        }
     }
     else {
-        var n = document.getElementById("n").value;
-        var k = document.getElementById("k").value;
-        var l = n - k;
-        var sum = Fact(n) / (Fact(k) * Fact(l))
+        if (n == k) {
+            sum = 1;
+        }
+        else {
+            var l = n - k;
+            var sum = Fact(n) / (Fact(k) * Fact(l))
+        }
+
     }
 
     console.log(sum);
 
     var b = sum;
     b = b.toFixed()
-    if ((b > 0) && (b > 1)) {
+    if ((b > 0) && (b >= 1)) {
         document.getElementById('calculatorOutput').innerHTML = b;
     }
     else {
         sum = "Invalid input";
         document.getElementById('calculatorOutput').innerHTML = sum;
+    }
+}
+function choose() {
+    i = Number(document.getElementById("combSelMain").value);
+    if (i == 0) {
+        document.getElementsByid('combinatoricsOutput').style.visibility = 'visible';
+        document.getElementsByid('allVarOutput').style.visibility = 'hidden';
+
+    }
+    if (i == 1) {
+        document.getElementsByid('combinatoricsOutput').style.visibility = 'hidden';
+        document.getElementsByid('allVarOutput').style.visibility = 'visible';
     }
 }
 

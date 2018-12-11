@@ -4,9 +4,11 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
+  <title>Project work. Team 11</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="converter.css" />
+  <link rel="shortcut icon" href="65906.png">
   <script src="main.js"></script>
   <script src="combinatorics.js"></script>
   <script src="random.js"></script>
@@ -33,7 +35,7 @@
         This site includes a lot of different interesting mathematics things
       </div>
       <div> <img class="pic1" src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/alittlefunwi.jpg"
-          alt=""></div>
+          alt="math"></div>
     </div>
 
 
@@ -41,17 +43,27 @@
   </div>
 
   <div id="Converter" class="tabcontent">
-    <h3>Converter program</h3>
+      
+    <div class="converterDescription">
+        <h1>Converter program</h1>
     This program can convert numbers where you can choose from which number system to which you need to convert the
-    number
-    Input here your number
-    <input type="text" id="firstNumber" name="Input number" value="" placeholder="123"> <br>
-    Enter the number system of your number
-    <input type="number" min="2" max="16" id="startSystem" name="system" value="10" placeholder="2"> <br>
-    Enter the final number base system
-    <input type="number" min="2" max="16" id="finalSystem" name="system" value="16" placeholder="16"> <br>
-    <button type="button" name="button" onclick="convertion()">Go</button>
-    <div id="info"></div>
+    number </div>
+    <div class="converterOutput"> <div class="Yournumber">Your number:</div>  
+        <input type="text" class="element"  id="firstNumber" name="Input number" value="" placeholder="123">
+        <table class="convTable"><tr><th>From</th> 
+      <th><input type="number" class="element" min="2" max="16" id="startSystem" name="system" value="10" placeholder="2"> </th>
+    </tr>
+    <tr><th>to</th>
+      <th><input type="number" min="2" max="16" class="element" id="finalSystem" name="system" value="16" placeholder="16"> <br></th>
+    </tr></table>  
+    
+    
+    
+    
+    <button type="button" class="buttonConv" name="button" onclick="convertion()">Go</button>
+    <div class="Yournumber">Answer:</div>
+    <div id="info" class="answer"></div>
+  </div>
   </div>
 
   <div id="Number_system_outputs" class="tabcontent">
@@ -90,6 +102,7 @@
       </div><br>
       <div id="calculatorOutput"></div>
       <h3>Sets</h3>
+      <h3>Without repetitions</h3>
       <div class="comb">
         <button type="button" name="button" id="combinatoricsButton" onclick="combinatorics()">Show</button>
         <select name="combinatorics" id="combinatoricsSel">
@@ -104,15 +117,16 @@
         </select>
 
         <div id="combinatoricsOutput"></div>
-      </div>
+      </div><br> <br>
 
       <div class="allVar">
+        <h3>With repetitions</h3>
         <button type="button" name="button" id="allVarButton" onclick="allVariants()">Show</button>
         <select name="combinatorics" id="allVarVariants">
           <option value="0">0</option>
           <option value="4">4</option>
           <option value="5">5</option>
-         </select>
+        </select>
         <div id="allVarOutput"></div>
       </div>
     </div>
@@ -141,18 +155,18 @@
   </div>
   <div id="Prime" class="tabcontent">
     <h3>Prime numbers </h3>
-   
+
     <div id="primeNumbersLayout" class="primeNumberPlace"><br>
-    <input type="number" id="primeNumberRange" name="primeNumberRange"  placeholder=""> <br>
-    <button type="button" name="button" id="allVarButton" onclick="prime()">Show</button>
+      <input type="number" id="primeNumberRange" name="primeNumberRange" placeholder=""> <br>
+      <button type="button" name="button" id="allVarButton" onclick="prime()">Show</button>
       <div id="primeNumberPlace"> </div>
-    <!--<table>
+      <!--<table>
     <tr><th><button type="button" name="button1" id="gameButton1" onclick="">Start</button></th>
     <th><button type="button" name="button2" id="gameButton2" onclick="">Start</button></th></tr>
     <tr><th><button type="button" name="button3" id="gameButton3" onclick="">Start</button></th>
     <th><button type="button" name="button4" id="gameButton4" onclick="">Start</button></th></tr>
   </table> -->
-</div>
+    </div>
   </div>
   <div id="About_us" class="tabcontent">
     <h3>About</h3>

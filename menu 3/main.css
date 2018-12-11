@@ -1,10 +1,13 @@
 /* Set height of body and the document to 100% to enable "full page tabs" */
 
-body, html {
+body {
   height: 100%;
   margin: 0;
   font-family: Arial;
+  background-color: rgba(85, 85, 85, 0.137);
 }
+
+
 
 h3 {
   margin: 0;
@@ -42,7 +45,6 @@ h3 {
   font-size: 100%;
   width: 50%;
   height: 100%;
-  float: right;
 }
 
 .tablink:hover {
@@ -52,11 +54,10 @@ h3 {
 /* Style the tab content (and add height:100% for full page content) */
 
 .tabcontent {
-  background-color: rgba(85, 85, 85, 0.137);
   color: black;
   display: none;
   padding: 100px 20px;
-  height: 100%;
+  height: auto;
 }
 
 .mainwords {
@@ -82,15 +83,16 @@ h3 {
   position: relative;
   left: 500 px;
 }
+
 .comb {
   width: 50%;
   float: left;
 }
-.gamePlace
-{
-  visibility:visible;
 
+.gamePlace {
+  visibility: visible;
 }
+
 @media (max-width: 1000px) {
   .flexbox {
     display: flex;
@@ -103,38 +105,38 @@ h3 {
     border: rgb(240, 232, 232);
     outline: none;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 13px;
     width: 25%;
   }
   .tabcontent {
     color: black;
     display: none;
     padding: 0px 20px;
-    height: 100%;
+    height: auto;
   }
-  
-#combinatoricsOutput {
-  font-size: 70%;
-  width: 30%;
-  height: 50%;
+  #combinatoricsOutput {
+    font-size: 70%;
+    width: 30%;
+    height: 50%;
+  }
 }
-}
-.rand
-{
+
+.rand {
   width: 50%;
 }
-.tableContentRandom
-{
+
+.tableContentRandom {
   font-size: 100%;
   font-weight: normal;
-padding: 0px;
- height: 30%;
- width: 100%;
+  padding: 0px;
+  height: 30%;
+  width: 100%;
 }
-#valueRangeOutput
-{
+
+#valueRangeOutput {
   font-size: 100%
 }
+
 #Home {
   background-color: white;
 }
