@@ -26,13 +26,19 @@ function convertion() {
     var finalSystem = Number(document.getElementById("finalSystem").value);
     var startSystem = Number(document.getElementById("startSystem").value);
     var arr = number.split('');
+    if (arr[0]=="-")
+    var v=1;
+    console.log(arr)
     for (i = 0; i < arr.length; i++) {
+        
         arr[i] = parseInt(arr[i], startSystem);
-        if ((arr[i] < startSystem) && (number >= 0)) {
+        if ((arr[i] < startSystem) && (v != 1)) {
             check = 0;
+            
         }
         else {
             check = 1;
+            console.log(number);
         }
     }
     if ((startSystem < 2) || (finalSystem > 16) || (finalSystem < 2) || (startSystem > 16)) {
@@ -134,24 +140,4 @@ function convertion() {
         }
 
     }
-}
-function table(t, i) {
-    var k;
-    k = (t.toString(i));
-    k = k.toString().toUpperCase();
-
-    return (k);
-}
-function turnOn() {
-    if (document.getElementById('checkButton').textContent == 'Show') {
-        document.getElementById('table').style.visibility = 'visible';
-        document.getElementById('checkButton').textContent = 'Clean';
-
-    }
-    else {
-        document.getElementById('table').style.visibility = 'hidden';
-        document.getElementById('checkButton').textContent = 'Show';
-
-    }
-
 }
