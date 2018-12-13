@@ -15,22 +15,11 @@
   <link rel="shortcut icon" href="65906.png">
   <script src="main.js"></script>
   <script src="combinatorics.js"></script>
+  <script src="converter.js"></script>
   <script src="random.js"></script>
   <script src="number_system.js"></script>
   <script src="prime.js"></script>
 </head>
-<style>
-  table, tr, th
-  {
-    border: 1px solid black;
-    border-collapse: collapse;
-
-
-  }
-  tr, th{
-    padding: 15px;
-  }
-</style>
 
 <body>
   <div class="flexbox">
@@ -44,7 +33,7 @@
     <button class="tablink" onclick="openPage('About_us', this, 'lightgray')">About us</button>
   </div>
   <div id="Main_page" class="tabcontent">
-    <div>
+    <div class="container">
       <div class="mainwords">
         <h3>Hello!</h3>
         This site is made to help learning computing mathematics.
@@ -53,7 +42,8 @@
         <p>With the information of this site you can easily learn math.</p>
       </div>
       <div> <img class="pic1" src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/alittlefunwi.jpg"
-          alt="math"></div>
+          alt="math_boy"></div>
+        
     </div>
 
 
@@ -61,37 +51,46 @@
   </div>
 
   <div id="Converter" class="tabcontent">
-      
+
     <div class="converterDescription">
-        <h1>Converter program</h1>
-    This program can convert numbers where you can choose from which number system to which you need to convert the
-    number </div>
-    <div class="converterOutput"> <div class="Yournumber">Your number:</div>  
-        <input type="text" class="element"  id="firstNumber" name="Input number" value="" placeholder="123">
-        <table class="convTable"><tr><th>From</th> 
-      <th><input type="number" class="element1" min="2" max="16" id="startSystem" name="system" value="10" placeholder="2"> </th>
-    </tr>
-    <tr><th>to</th>
-      <th><input type="number" min="2" max="16" class="element1" id="finalSystem" name="system" value="16" placeholder="16"> <br></th>
-    </tr></table>  
-    
-    
-    
-    
-    <button type="button" class="buttonConv" name="button" onclick="convertion()">Go</button>
-    <div class="Yournumber">Answer:</div>
-    <div id="info" class="answer"></div>
-  </div>
+      <h1>Converter program</h1>
+      This program can convert numbers where you can choose from which number system to which you need to convert the
+      number
+    </div>
+    <div class="converterOutput">
+      <div class="Yournumber">Your number:</div>
+      <input type="text" class="element" id="firstNumber" name="Input number" value="" placeholder="123">
+      <table class="convTable">
+        <tr>
+          <th>From</th>
+          <th><input type="number" class="element1" min="2" max="16" id="startSystem" name="system" value="10"
+              placeholder="2"> </th>
+        </tr>
+        <tr>
+          <th>to</th>
+          <th><input type="number" min="2" max="16" class="element1" id="finalSystem" name="system" value="16"
+              placeholder="16"> <br></th>
+        </tr>
+      </table>
+
+
+
+
+      <button type="button" class="buttonConv" name="button" onclick="convertion()">Go</button>
+      <div class="Yournumber">Answer:</div>
+      <div id="info" class="answer"></div>
+    </div>
   </div>
 
   <div id="Number_system_outputs" class="tabcontent">
-   <div class="systemOutputDescription">
-    <h1>System outputs</h1>
-<br>
-   
-   <div class="systemOutputDescription1"> Here you can use the table which contains different number systems.</div> <br>
-   <button type="button" class="buttonConv" name="button" id="checkButton" onclick="turnOn()">Show</button> <br>
-  </div>
+    <div class="systemOutputDescription">
+      <h1>System outputs</h1>
+      <br>
+
+      <div class="systemOutputDescription1"> Here you can use the table which contains different number systems.</div>
+      <br>
+      <button type="button" class="buttonConv" name="button" id="checkButton" onclick="turnOn()">Show</button> <br>
+    </div>
     <div id="table" class="table systemOutputDescription">
       <script language="JavaScript" class="tableContent">
 
@@ -105,25 +104,38 @@
         document.write("</div>");
 
       </script>
-      
+
     </div>
-    
+
 
   </div>
 
   <div id="Combinatorics" class="tabcontent">
-    <h3>Combinatorics</h3>
-   
-   
-    
-   <div>
-     <h3>Lists calculator</h3>
-     
+    <div class="converterDescription">
+      <h1>Combinatorics</h1>
+      <div class="systemOutputDescription1">This program provides a small nCr/nPr calculator and can create two
+        different types of sets. </div>
+      <h2>nCr/nPr calcullator</h2>
+      <div class="systemOutputDescription1">This calculator based on this formules:</div> <br>
+      <img src="NcrNpr.png" alt="nCr">
+
+      <div class="nCrCalc"> <div class="answerCalc">Calculator  </div> <input type="number" min="1" max="100" id="n" name="system" class="elementComb" value=""
+          placeholder="n">
+        <input type="number" min="1" max="100" id="k" name="system" class="elementComb" value="" placeholder="r"><br>
+        <select name="calculator" class="elementComb" id="calculatorSel">
+          <option value="0">nPr</option>
+          <option value="1">nCr</option>
+        </select><br>
+        <button type="button" class="buttonConv" name="button" id="calculatorButton" onclick="nCr()">Count</button><br>
+        <div class="answerCalc">Answer:</div>
+        <div id="calculatorOutput"></div>
+      </div><br>
+
       <h1>Sets</h1>
       <h2>Without repetitions</h2>
-      <div class="comb"> 
-        Choose the number of elements : 
-        <select name="combinatorics" class="elementComb" id="combinatoricsSel">
+      <div class="comb">
+        Choose the number of elements :
+        <select name="combinatorics" class="element" id="combinatoricsSel">
           <option value="0">0</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -131,18 +143,18 @@
           <option value="5">5</option>
           <option value="6">6</option>
           <option value="7">7</option>
-    
-        </select> <br>
-        <button type="button" name="button" id="combinatoricsButton" class="buttonConv" onclick="combinatorics()">Show</button> 
 
-        <div  id="combinatoricsOutput"></div>
+        </select> <br>
+        <button type="button" name="button" id="combinatoricsButton" class="buttonConv" onclick="combinatorics()">Show</button>
+
+        <div id="combinatoricsOutput"></div>
       </div><br> <br>
 
       <div class="allVar">
         <h2>With repetitions</h2>
-      
-        Choose the number of elements : 
-        <select name="combinatorics" class="elementComb" id="allVarVariants">
+
+        Choose the number of elements :
+        <select name="combinatorics" class="element" id="allVarVariants">
           <option value="0">0</option>
           <option value="4">4</option>
           <option value="5">5</option>
@@ -155,103 +167,54 @@
 
 
   <div id="Truth_tables" class="tabcontent">
-    <h3>Tables</h3>
-    <table>
-        <tr>
-            <th>Inputs</th> 
-            <th>---</th>
-            <th>AND</th>
-            <th>XOR</th>
-            <th>OR</th>
-            <th>NOR</th>
-            <th>XNOR</th>
-            <th>XAND</th>
-            <th>---</th>
-            </tr>
-
-            <tr>
-                <th>0 0</th>
-                <th>0</th>
-                <th>0</th>
-                <th>0</th>
-                <th>0</th>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-                <th>1</th>
-
-
-            </tr>
-            <tr>
-                <th>0 1</th>
-                <th>0 0</th>
-                <th>0 0</th>
-                <th>1 1</th>
-                <th>1 1</th>
-                <th>0 0</th>
-                <th>0 0</th>
-                <th>1 1</th>
-                <th>1 1</th>
-                
-                
-            </tr>  
-            <tr>
-               <th>or</th>
-               
-            </tr>
-            <tr>
-             <th>1 0</th>
-            </tr>
-            <tr>
-                <th>1 1</th>
-                <th>0</th>
-                <th>1</th>
-                <th>0</th>
-                <th>1</th>
-                <th>0</th>
-                <th>1</th>
-                <th>0</th>
-                <th>1</th>
-            </tr>
-            
-    </table>
+    <h1>Tables</h1>
 
   </div>
   <div id="Random values" class="tabcontent">
-    <div class="converterDescription"><h1>Random values</h1>
-    <div class="rand">
-      <p class="systemOutputDescription1">Here you can see random values feature</p>
-      <table class="randomInputTable"><tr><th>Range:</th>
-        <th><input type="number" min="-100" max="100" id="firstRange" name="valueRange1" class="element1" value="-5" placeholder="2"></th>
-        <th><input type="number" min="-100" max="100" id="secondRange" name="valueRange2" value="10" class="element1" placeholder="2"> </th></tr>
-      <tr><th>Amount of numbers:</th>
-        <th><input type="number" min="-100" max="100" id="rangeLength" name="valueRange2" class="element1" value="10" placeholder="2"></th></tr>
-      </table>
-      
-      <br>
-      
-      <button type="button" name="button" class="buttonConv" id="allVarButton" onclick="Random()">Show</button>
+    <div class="converterDescription">
+      <h1>Random values</h1>
+      <div class="rand">
+        <p class="systemOutputDescription1">Here you can see random values feature</p>
+        <table class="randomInputTable">
+          <tr>
+            <th>Range:</th>
+            <th><input type="number" min="-100" max="100" id="firstRange" name="valueRange1" class="element1" value="-5"
+                placeholder="2"></th>
+            <th><input type="number" min="-100" max="100" id="secondRange" name="valueRange2" value="10" class="element1"
+                placeholder="2"> </th>
+          </tr>
+          <tr>
+            <th>Amount of numbers:</th>
+            <th><input type="number" min="-100" max="100" id="rangeLength" name="valueRange2" class="element1" value="10"
+                placeholder="2"></th>
+          </tr>
+        </table>
 
-      <div id="valueRangeOutput"></div>
+        <br>
 
-      <div id="Statistics"></div>
-      <div id="devidedValues"></div>
-    </div>
+        <button type="button" name="button" class="buttonConv" id="allVarButton" onclick="Random()">Show</button>
+
+        <div id="valueRangeOutput"></div>
+
+        <div id="Statistics"></div>
+        <div id="devidedValues"></div>
+      </div>
     </div>
 
 
   </div>
   <div id="Prime" class="tabcontent">
-  <div class="converterDescription">
-    <h1>Prime numbers </h1>
-    <div class="head">This program displays all prime numbers before the number you enter.</div>
+    <div class="converterDescription">
+      <h1>Prime numbers </h1>
+      <div class="head">This program displays all prime numbers before the number you enter.</div>
 
-    <div id="primeNumbersLayout" class="primeNumberPlace"><br>
-      <input type="number" class="element" id="primeNumberRange" name="primeNumberRange" value="123" placeholder=""> <br>
-      <button type="button" class="buttonConv" name="button" id="allVarButton" onclick="prime()">Show</button>
-      <div id="primeNumberPlace"> </div>
+      <div id="primeNumbersLayout" class="primeNumberPlace"><br>
+        <input type="number" class="element" id="primeNumberRange" name="primeNumberRange" value="123" placeholder="">
+        <br>
+        <button type="button" class="buttonConv" name="button" id="allVarButton" onclick="prime()">Show</button>
+        <div id="primeNumberPlace"> </div>
+      </div>
     </div>
-  </div>
   </div>
   <div id="About_us" class="tabcontent">
     <h3>About</h3>

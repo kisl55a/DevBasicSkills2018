@@ -1,7 +1,7 @@
 
 function combinatorics() {
     a = Number(document.getElementById("combinatoricsSel").value);
-   
+
     var final = [];
     var tab;
     var out = (' ');
