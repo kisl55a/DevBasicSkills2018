@@ -33,7 +33,7 @@ function Random() {
         if (t[i] % 7 == 0) { seven++; } 
         if (isPrime(t[i]) == true) { prime++; }
     }
-    k = ("<table border=1 class='tableContentRandom' > <h1>Statistics:</h1><tr><th>Number type</th><th>Result</th></tr>");
+    k = ("<table border=0 class='tableContentRandom kf' > <h1>Statistics:</h1><tr><th>Number type</th><th>Result</th></tr>");
     k = k + ("<tr><th> Negative</th><th>" + neg + "</th></tr>");
     k = k + ("<tr><th> Positive</th><th>" + pos + "</th></tr>");
     k = k + ("<tr><th> Devided by 3</th><th>" + three + "</th></tr>");
@@ -41,7 +41,7 @@ function Random() {
     k = k + ("<tr><th> Devided by 7</th><th>" + seven + "</th></tr>");
     k = k + ("<tr><th> Prime</th><th>" + prime + "</th></tr>");
     k = k + ("</table>");
-    l= ("<table border=1 class='tableContentRandom' > <h1>Devided values:</h1><tr><th>Number </th><th>How many times</th></tr>");
+    l= ("<table class='tableContentRandom kf' > <h1>Devided values:</h1><tr><th>Number </th><th>How many times</th></tr>");
     t.sort();
     for(i=0;i<t.length;i++)
     {

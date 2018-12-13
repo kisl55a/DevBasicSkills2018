@@ -10,7 +10,7 @@ function prime()
         }
     } 
     var tab;
-    tab="<table><tr>"
+    tab="<table class='primeNumbersTable kf'><tr>"
     for (i=0;i<y.length;i++)
     {
        if ((i%5!=4)&&(i!=y.length-1))

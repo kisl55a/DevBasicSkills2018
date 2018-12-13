@@ -1,6 +1,7 @@
 
 function combinatorics() {
     a = Number(document.getElementById("combinatoricsSel").value);
+   
     var final = [];
     var tab;
     var out = (' ');
@@ -20,7 +21,7 @@ function combinatorics() {
 
     }
     else { final = " " }
-    tab = "<table class='combinatoricsTable'><tr>";
+    tab = "<table class='combinatoricsTable '><tr>";
     for (i = 0; i < final.length; i++) {
         if ((i % 4 != 3) && (i != final.length - 1)) {
             tab = tab + "<th>" + final[i] + "</th>";

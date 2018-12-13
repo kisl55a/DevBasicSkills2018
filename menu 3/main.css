@@ -31,24 +31,38 @@ h3 {
   width: 25%;
 }
 
-#combinatoricsOutput {
-  font-size: 100%;
-  width: 50%;
-  height: 100%;
-}
 
-#allVarOutput {
-  font-size: 100%;
-}
 
 .allVar {
   font-size: 100%;
-  width: 50%;
   height: 100%;
 }
 
 .tablink:hover {
   background-color: #777;
+}
+.element {
+  font-family: "Montserrat", sans-serif;
+  width: auto;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  background-color: #efefef;
+  padding: 1px 1px;
+  font-size: 100%;
+  box-shadow: 0px 0.1px 0.5px #ccc;
+}
+.element1 {
+  font-family: "Montserrat", sans-serif;
+  width: auto;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  background-color: #efefef;
+  padding: 1px 1px;
+  font-size: 100%;
+  box-shadow: 0px 0.1px 0.5px #ccc;
+  float: left;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -68,31 +82,25 @@ h3 {
 }
 
 .pic1 {
+  margin-top: 2%;
   height: 50%;
   width: 50%;
   float: right;
 }
-
-.table {
-  visibility: hidden;
+.buttonConv {
+  margin-top: 2%;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 7px 21px;
+  color: #000000;
+  background-color: #e6eff5;
+  border-radius: 49px;
+  border: 2px solid #6b6d6e;
 }
-
-.tableContent {
-  font-size: 120%;
-  width: 50%;
-  position: relative;
-  left: 500 px;
+.buttonConv:hover
+{
+  background-color: rgba(196, 214, 198, 0.897);
 }
-
-.comb {
-  width: 50%;
-  float: left;
-}
-
-.gamePlace {
-  visibility: visible;
-}
-
 @media (max-width: 1000px) {
   .flexbox {
     display: flex;
@@ -105,7 +113,7 @@ h3 {
     border: rgb(240, 232, 232);
     outline: none;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 20px;
     width: 25%;
   }
   .tabcontent {
@@ -114,41 +122,29 @@ h3 {
     padding: 0px 20px;
     height: auto;
   }
-  #combinatoricsOutput {
-    font-size: 70%;
-    width: 30%;
-    height: 50%;
+
+}
+@media (max-width:800px)
+{
+  .tablink {
+    background-color: #555;
+    color: white;
+    border: rgb(240, 232, 232);
+    outline: none;
+    cursor: pointer;
+    font-size: 13px;
+    width: 25%;
   }
 }
-
-.rand {
-  width: 50%;
-}
-
-.tableContentRandom {
-  font-size: 100%;
-  font-weight: normal;
-  padding: 0px;
-  height: 30%;
-  width: 100%;
-}
-
-#valueRangeOutput {
-  font-size: 100%
-}
-
-#Home {
-  background-color: white;
-}
-
-#News {
-  background-color: white;
-}
-
-#Contact {
-  background-color: white;
-}
-
-#About {
-  background-color: white;
+@media (max-width:400px)
+{
+  .tablink {
+    background-color: #555;
+    color: white;
+    border: rgb(240, 232, 232);
+    outline: none;
+    cursor: pointer;
+    font-size: 10px;
+    width: 25%;
+  }
 }
