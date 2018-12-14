@@ -39,7 +39,10 @@
         box-shadow: 0px 0.1px 0.5px #ccc;
     }
 }
-
+.ConvDesc
+{
+    font-size: 150%;
+}
 .Yournumber {
     font-size: 100%;
     font-weight: bold;
@@ -66,4 +69,8 @@
     .converterOutput {
         font-size: 100%;
     }
+    .ConvDesc
+{
+    font-size: 100%;
+}
 }

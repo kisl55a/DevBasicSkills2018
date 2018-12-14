@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="prime.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="random_values.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="combinatorics.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="about.css" />
   <link rel="shortcut icon" href="65906.png">
   <script src="main.js"></script>
   <script src="combinatorics.js"></script>
@@ -30,7 +31,7 @@
     <button class="tablink" onclick="openPage('Truth_tables', this, 'lightgray')">Tables</button>
     <button class="tablink" onclick="openPage('Random values', this, 'lightgray')">Random values </button>
     <button class="tablink" onclick="openPage('Prime', this, 'lightgray')">Prime numbers</button>
-    <button class="tablink" onclick="openPage('About_us', this, 'lightgray')">About us</button>
+    <button class="tablink" onclick="openPage('About_us', this, 'lightgray')">About project</button>
   </div>
   <div id="Main_page" class="tabcontent">
     <div class="container">
@@ -41,7 +42,7 @@
 
         <p>With the information of this site you can easily learn math.</p>
       </div>
-      <div> <img class="pic1" src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/alittlefunwi.jpg"
+      <div> <img class="pic1 " src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/alittlefunwi.jpg"
           alt="math_boy"></div>
         
     </div>
@@ -54,8 +55,8 @@
 
     <div class="converterDescription">
       <h1>Converter program</h1>
-      This program can convert numbers where you can choose from which number system to which you need to convert the
-      number
+      <div class="ConvDesc">This program can convert numbers where you can choose from which number system to which you need to convert the
+      number</div>
     </div>
     <div class="converterOutput">
       <div class="Yournumber">Your number:</div>
@@ -117,7 +118,7 @@
         different types of sets. </div>
       <h2>nCr/nPr calcullator</h2>
       <div class="systemOutputDescription1">This calculator based on this formules:</div> <br>
-      <img src="NcrNpr.png" alt="nCr">
+      <img src="NcrNpr.png" class="img1" alt="nCr">
 
       <div class="nCrCalc"> <div class="answerCalc">Calculator  </div> <input type="number" min="1" max="100" id="n" name="system" class="elementComb" value=""
           placeholder="n">
@@ -217,9 +218,17 @@
     </div>
   </div>
   <div id="About_us" class="tabcontent">
-    <h3>About</h3>
-    <p>Who we are and what we do.</p>
-  </div>
+    <div class="aboutUs"><h1 >About project</h1>
+    <p>This project work was done to improve our skills in such areas like: JavaScript, CSS and HTML сoding.  
+      It is  the logical end of this period. It finally consolidated all the knowledge 
+      that we received in last six months. We spent a lot of time doing it and learned a lot of new things.
+       This project helps us to understand our level and shows us the things where we should work more. 
+       We worked with pleasure and hope that our efforts will be appreciated.</p> 
+       <h2>Happy new year!</h2> 
+       
+  </div> <div class="Happy">
+  <img src="santa.png" alt="santa"></div></div>
+
 </body>
 <script src="main.js"></script>
 <script src="combinatorics.js"></script>

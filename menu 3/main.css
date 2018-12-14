@@ -84,6 +84,8 @@ h3 {
   height: 50%;
   width: 50%;
   float: right;
+  border-radius: 5%;
+  box-shadow: 2px 4px 11px 9px #ccc;
 }
 
 .buttonConv {
@@ -100,6 +102,7 @@ h3 {
 .buttonConv:hover {
   background-color: rgba(207, 218, 208, 0.493);
 }
+
 
 @media (max-width: 1000px) {
   .flexbox {
