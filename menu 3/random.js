@@ -1,10 +1,10 @@
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+function getRandomInt(min, max) { min++;
+        return Math.floor(Math.random() * (max - min)) + min;
 }
-function isPrime(num) {
-    if (num < 2) return false;
-    for (var i = 2; i < num; i++) {
-        if (num % i == 0)
+function isPrime(a) {
+    if (a < 2) return false;
+    for (var i = 2; i < a; i++) {
+        if (a % i == 0)
             return false;
     }
     return true;
@@ -25,6 +25,7 @@ function Random() {
         else
             output = output + " " + t[i];
     }
+    t.sort();
     for (i = 0; i < t.length; i++) {
         if (t[i] < 0) { neg = neg + 1; }
         if (t[i] > 0) { pos++; }

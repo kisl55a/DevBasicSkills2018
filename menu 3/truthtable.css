@@ -1,28 +1,24 @@
 .truthtable{
-    width: 800px;
-    height: 195px;
-    background-color: white;
+    width: 70%;
+    height: 50%;
+    font-size: 150%;
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
-    
-    
-    
+
 }
-
-
-
-
-
-
-
-table,tr,th{
-    box-sizing: border-box;
-    border:1px solid black;
-    width:800px;
-    height:35px;
+@media(max-width:500px)
+{
+    .truthtable{
+        width: 70%;
+        height: 50%;
+        font-size: 100%;
+        border: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }  
 }
-
 
 
     

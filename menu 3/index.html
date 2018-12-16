@@ -13,6 +13,9 @@
   <link rel="stylesheet" type="text/css" media="screen" href="random_values.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="combinatorics.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="about.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="truthtable.css" />
+  
+
   <link rel="shortcut icon" href="65906.png">
   <script src="main.js"></script>
   <script src="combinatorics.js"></script>
@@ -88,7 +91,7 @@
       <h1>System outputs</h1>
       <br>
 
-      <div class="systemOutputDescription1"> Here you can use the table which contains different number systems.</div>
+      <div class="systemOutputDescription1"> Here you can see the table which contains different number systems.</div>
       <br>
       <button type="button" class="buttonConv" name="button" id="checkButton" onclick="turnOn()">Show</button> <br>
     </div>
@@ -114,7 +117,7 @@
   <div id="Combinatorics" class="tabcontent">
     <div class="converterDescription">
       <h1>Combinatorics</h1>
-      <div class="systemOutputDescription1">This program provides a small nCr/nPr calculator and can create two
+      <div class="systemOutputDescription1">This page provides a small nCr/nPr calculator and can create two
         different types of sets. </div>
       <h2>nCr/nPr calcullator</h2>
       <div class="systemOutputDescription1">This calculator based on this formules:</div> <br>
@@ -167,73 +170,71 @@
   </div>
 
 
-  <div id="Truth_tables" class="tabcontent">
-    <h1>Tables</h1>
-    <div class="truthtable">
-        <table class="table">
-            <tr>
-                  <th>a</th>
-                  <th>b</th>
-                  <th>not<br> &#172;b</th>
-                  <th>and<br>a &#8743; b</th>
-                  <th>or<br>a &#8744; b</th>
-                  <th>nor<br>a &#8893; b</th>
-                  <th>xor<br>a &#8891; b</th>
-                  <th>implies<br>a &#8594; b</th>
-                  <th>nand<br>a &#8892; b</th>
-
-            </tr>
-            
-            <tr>
-                  <th>0</th>
-                  <th>0</th>
-                  <th>1</th>
-                  <th>0</th>
-                  <th>0</th>
-                  <th>1</th>
-                  <th>0</th>
-                  <th>1</th>
-                  <th>1</th>
-            </tr>
-            
-            <tr>
-                  <th>0</th>
-                  <th>1 </th>
-                  <th>0</th>
-                  <th>0</th>
-                  <th>1</th>
-                  <th>0</th>
-                  <th>1</th>
-                  <th>1</th>
-                  <th>1</th>
-            </tr>
-            
-            <tr>
-                  <th>1</th>
-                  <th>0</th>
-                  <th></th>
-                  <th>0</th>
-                  <th>1</th>
-                  <th>0</th>
-                  <th>1</th>
-                  <th>0</th>
-                  <th>1</th>
-            </tr>
-            
-            <tr>
-                  <th>1</th>
-                  <th>1</th>
-                  <th></th>
-                  <th>1</th>
-                  <th>1</th>
-                  <th>0</th>
-                  <th>0</th>
-                  <th>1</th>
-                  <th>0</th>
-            </tr>
-          </table>
-      </div>
-
+  <div id="Truth_tables" class="tabcontent ">
+   <div class="converterDescription"> <h1>Tables</h1><br><div class="ConvDesc">Here you can see truth tables for basic logical operators</div></div>
+    <br><div>
+      <table border="1" class="truthtable">
+        <tr>
+          <th>a</th>
+          <th>b</th>
+          <th>not<br> &#172;b</th>
+          <th>and<br>a &#8743; b</th>
+          <th>or<br>a &#8744; b</th>
+          <th>nor<br>a &#8893; b</th>
+          <th>xor<br>a &#8891; b</th>
+          <th>implies<br>a &#8594; b</th>
+          <th>nand<br>a &#8892; b</th>
+        </tr>
+  
+        <tr>
+          <th>0</th>
+          <th>0</th>
+          <th>1</th>
+          <th>0</th>
+          <th>0</th>
+          <th>1</th>
+          <th>0</th>
+          <th>1</th>
+          <th>1</th>
+        </tr>
+  
+        <tr>
+          <th>0</th>
+          <th>1 </th>
+          <th>0</th>
+          <th>0</th>
+          <th>1</th>
+          <th>0</th>
+          <th>1</th>
+          <th>1</th>
+          <th>1</th>
+        </tr>
+  
+        <tr>
+          <th>1</th>
+          <th>0</th>
+          <th>0</th>
+          <th>0</th>
+          <th>1</th>
+          <th>0</th>
+          <th>1</th>
+          <th>0</th>
+          <th>1</th>
+        </tr>
+  
+        <tr>
+          <th>1</th>
+          <th>1</th>
+          <th>1</th>
+          <th>1</th>
+          <th>1</th>
+          <th>0</th>
+          <th>0</th>
+          <th>1</th>
+          <th>0</th>
+        </tr>
+      </table>
+    </div>
   </div>
   <div id="Random values" class="tabcontent">
     <div class="converterDescription">
@@ -283,9 +284,9 @@
   </div>
   <div id="About_us" class="tabcontent">
     <div class="aboutUs"><h1 >About project</h1>
-    <p>This project work was done to improve our skills in such areas like: JavaScript, CSS and HTML сoding.  
-      It is  the logical end of this period. It finally consolidated all the knowledge 
-      that we received in last six months. We spent a lot of time doing it and learned a lot of new things.
+    <p>This project work was done to improve our skills in areas like: JavaScript, CSS and HTML сoding.  
+   It finally consolidated all the knowledge 
+      that we gained in last six months. We spent a lot of time doing it and learned a lot of new things.
        This project helps us to understand our level and shows us the things where we should work more. 
        We worked with pleasure and hope that our efforts will be appreciated.</p> 
        <h2>Happy new year!</h2> 
@@ -298,6 +299,6 @@
 <script src="combinatorics.js"></script>
 <script src="random.js"></script>
 <script src="number_system.js"></script>
-        
+<script src="prime.js"></script>
 
 </html>
