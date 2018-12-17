@@ -1,9 +1,8 @@
-.head
-{
+.head {
     font-size: 150%;
 }
-.primeNumbersTable
-{
+
+.primeNumbersTable {
     padding-top: 2%;
     font-family: "Montserrat", sans-serif;
     margin: 4% auto 10% auto;
@@ -12,9 +11,5 @@
     background-color: rgba(184, 187, 177, 0.979);
     width: 50%;
     box-shadow: 2px 4px 11px 9px #ccc;
-    /*border: 3px solid black;*/
-    /* Белая рамка */
     border-radius: 10px;
-  
-    /* Радиус скругления */
 }

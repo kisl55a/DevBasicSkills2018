@@ -1,3 +1,5 @@
+//This function checks what number before the user input are prime and 
+//outputs them
 function prime() {
     range = Number(document.getElementById('primeNumberRange').value);
     var y = [];

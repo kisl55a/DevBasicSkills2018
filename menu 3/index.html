@@ -6,25 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Project work. Team 11</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="converter.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="Num_sys_out.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="prime.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="random_values.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="combinatorics.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="about.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="truthtable.css" />
-  
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/converter.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/Num_sys_out.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/prime.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/random_values.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/combinatorics.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/about.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/truthtable.css" />
+
 
   <link rel="shortcut icon" href="65906.png">
-  <script src="main.js"></script>
-  <script src="combinatorics.js"></script>
-  <script src="converter.js"></script>
-  <script src="random.js"></script>
-  <script src="number_system.js"></script>
-  <script src="prime.js"></script>
+  <script src="javaScript/main.js"></script>
+  <script src="javaScript/combinatorics.js"></script>
+  <script src="javaScript/converter.js"></script>
+  <script src="javaScript/random.js"></script>
+  <script src="javaScript/number_system.js"></script>
+  <script src="javaScript/prime.js"></script>
 </head>
-
+<!-- Menu-->
 <body>
   <div class="flexbox">
     <button class="tablink" onclick="openPage('Main_page', this, 'lightgray')" id="defaultOpen">Main page</button>
@@ -36,30 +36,28 @@
     <button class="tablink" onclick="openPage('Prime', this, 'lightgray')">Prime numbers</button>
     <button class="tablink" onclick="openPage('About_us', this, 'lightgray')">About project</button>
   </div>
+
+<!-- Main page-->
   <div id="Main_page" class="tabcontent">
     <div class="container">
       <div class="mainwords">
         <h3>Hello!</h3>
         This site is made to help learning computing mathematics.
         You can easily navigate through menu bar to different pages.
-
         <p>With the information of this site you can easily learn math.</p>
       </div>
       <div> <img class="pic1 " src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/alittlefunwi.jpg"
           alt="math_boy"></div>
-        
-    </div>
+</div>
+</div>
 
-
-
-  </div>
-
+<!-- Converter part-->
   <div id="Converter" class="tabcontent">
-
-    <div class="converterDescription">
+<div class="converterDescription">
       <h1>Converter program</h1>
-      <div class="ConvDesc">This program can convert numbers where you can choose from which number system to which you need to convert the
-      number</div>
+      <div class="ConvDesc">This program can convert numbers where you can choose from which number system to which you
+        need to convert the
+        number</div>
     </div>
     <div class="converterOutput">
       <div class="Yournumber">Your number:</div>
@@ -76,44 +74,36 @@
               placeholder="16"> <br></th>
         </tr>
       </table>
-
-
-
-
       <button type="button" class="buttonConv" name="button" onclick="convertion()">Go</button>
       <div class="Yournumber">Answer:</div>
       <div id="info" class="answer"></div>
     </div>
   </div>
 
+<!-- Table with different number systems part-->
   <div id="Number_system_outputs" class="tabcontent">
     <div class="systemOutputDescription">
       <h1>System outputs</h1>
       <br>
-
-      <div class="systemOutputDescription1"> Here you can see the table which contains different number systems.</div>
+<div class="systemOutputDescription1"> Here you can see the table which contains different number systems.</div>
       <br>
       <button type="button" class="buttonConv" name="button" id="checkButton" onclick="turnOn()">Show</button> <br>
     </div>
+<!-- This script creates the table-->
     <div id="table" class="table systemOutputDescription">
       <script language="JavaScript" class="tableContent">
-
         document.write("<h2>Table of number systems</h2>");
         document.write("<table class='tableContent' border=1> <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hexidecimal</th></tr>")
         for (i = 1; i < 51; i++) {
           document.write("<tr><th>" + table(i, 10) + "</th><th>   " + table(i, 2) + "</th><th>    " + table(i, 8) + "</th><th>    " + table(i, 16) + "</th></tr> ");
-
         }
         document.write("</table>");
         document.write("</div>");
-
       </script>
-
     </div>
-
-
   </div>
 
+<!-- Combinatorics part-->
   <div id="Combinatorics" class="tabcontent">
     <div class="converterDescription">
       <h1>Combinatorics</h1>
@@ -122,9 +112,9 @@
       <h2>nCr/nPr calcullator</h2>
       <div class="systemOutputDescription1">This calculator based on this formules:</div> <br>
       <img src="NcrNpr.png" class="img1" alt="nCr">
-
-      <div class="nCrCalc"> <div class="answerCalc">Calculator  </div> <input type="number" min="1" max="100" id="n" name="system" class="elementComb" value=""
-          placeholder="n">
+      <div class="nCrCalc">
+        <div class="answerCalc">Calculator </div> <input type="number" min="1" max="100" id="n" name="system" class="elementComb"
+          value="" placeholder="n">
         <input type="number" min="1" max="100" id="k" name="system" class="elementComb" value="" placeholder="r"><br>
         <select name="calculator" class="elementComb" id="calculatorSel">
           <option value="0">nPr</option>
@@ -134,8 +124,7 @@
         <div class="answerCalc">Answer:</div>
         <div id="calculatorOutput"></div>
       </div><br>
-
-      <h1>Sets</h1>
+<h1>Sets</h1>
       <h2>Without repetitions</h2>
       <div class="comb">
         Choose the number of elements :
@@ -147,16 +136,12 @@
           <option value="5">5</option>
           <option value="6">6</option>
           <option value="7">7</option>
-
         </select> <br>
         <button type="button" name="button" id="combinatoricsButton" class="buttonConv" onclick="combinatorics()">Show</button>
-
         <div id="combinatoricsOutput"></div>
       </div><br> <br>
-
-      <div class="allVar">
+<div class="allVar">
         <h2>With repetitions</h2>
-
         Choose the number of elements :
         <select name="combinatorics" class="element" id="allVarVariants">
           <option value="0">0</option>
@@ -169,10 +154,14 @@
     </div>
   </div>
 
-
+<!-- Truth tables part-->
   <div id="Truth_tables" class="tabcontent ">
-   <div class="converterDescription"> <h1>Tables</h1><br><div class="ConvDesc">Here you can see truth tables for basic logical operators</div></div>
-    <br><div>
+    <div class="converterDescription">
+      <h1>Tables</h1><br>
+      <div class="ConvDesc">Here you can see truth tables for basic logical operators</div>
+    </div>
+    <br>
+    <div>
       <table border="1" class="truthtable">
         <tr>
           <th>a</th>
@@ -185,7 +174,7 @@
           <th>implies<br>a &#8594; b</th>
           <th>nand<br>a &#8892; b</th>
         </tr>
-  
+
         <tr>
           <th>0</th>
           <th>0</th>
@@ -197,7 +186,7 @@
           <th>1</th>
           <th>1</th>
         </tr>
-  
+
         <tr>
           <th>0</th>
           <th>1 </th>
@@ -209,7 +198,7 @@
           <th>1</th>
           <th>1</th>
         </tr>
-  
+
         <tr>
           <th>1</th>
           <th>0</th>
@@ -221,7 +210,7 @@
           <th>0</th>
           <th>1</th>
         </tr>
-  
+
         <tr>
           <th>1</th>
           <th>1</th>
@@ -236,6 +225,8 @@
       </table>
     </div>
   </div>
+  
+  <!-- Random values part-->
   <div id="Random values" class="tabcontent">
     <div class="converterDescription">
       <h1>Random values</h1>
@@ -255,25 +246,18 @@
                 placeholder="2"></th>
           </tr>
         </table>
-
         <br>
-
         <button type="button" name="button" class="buttonConv" id="allVarButton" onclick="Random()">Show</button>
-
         <div id="valueRangeOutput"></div>
-
         <div id="Statistics"></div>
         <div id="devidedValues"></div>
       </div>
     </div>
-
-
   </div>
   <div id="Prime" class="tabcontent">
     <div class="converterDescription">
       <h1>Prime numbers </h1>
       <div class="head">This program displays all prime numbers before the number you enter.</div>
-
       <div id="primeNumbersLayout" class="primeNumberPlace"><br>
         <input type="number" class="element" id="primeNumberRange" name="primeNumberRange" value="123" placeholder="">
         <br>
@@ -282,23 +266,26 @@
       </div>
     </div>
   </div>
+  
+  <!-- About project part-->
   <div id="About_us" class="tabcontent">
-    <div class="aboutUs"><h1 >About project</h1>
-    <p>This project work was done to improve our skills in areas like: JavaScript, CSS and HTML сoding.  
-   It finally consolidated all the knowledge 
-      that we gained in last six months. We spent a lot of time doing it and learned a lot of new things.
-       This project helps us to understand our level and shows us the things where we should work more. 
-       We worked with pleasure and hope that our efforts will be appreciated.</p> 
-       <h2>Happy new year!</h2> 
-       
-  </div> <div class="Happy">
-  <img src="santa.png" alt="santa"></div></div>
-
+    <div class="aboutUs">
+      <h1>About project</h1>
+      <p>This project work was done to improve our skills in areas like: JavaScript, CSS and HTML сoding.
+        It finally consolidated all the knowledge
+        that we gained in last six months. We spent a lot of time doing it and learned a lot of new things.
+        This project helps us to understand our level and shows us the things where we should work more.
+        We worked with pleasure and hope that our efforts will be appreciated.</p>
+      <h2>Happy new year!</h2>
+    </div>
+    <div class="Happy">
+      <img src="santa.png" alt="santa"></div>
+  </div>
 </body>
-<script src="main.js"></script>
-<script src="combinatorics.js"></script>
-<script src="random.js"></script>
-<script src="number_system.js"></script>
-<script src="prime.js"></script>
+<script src="javaScript/main.js"></script>
+<script src="javaScript/combinatorics.js"></script>
+<script src="javaScript/random.js"></script>
+<script src="javaScript/number_system.js"></script>
+<script src="javaScript/prime.js"></script>
 
 </html>

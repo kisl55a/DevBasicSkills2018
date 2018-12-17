@@ -18,17 +18,16 @@
     background-color: rgba(184, 187, 177, 0.979);
     width: 50%;
     box-shadow: 2px 4px 11px 9px #ccc;
-    /*border: 3px solid black;*/
-    /* Белая рамка */
     border-radius: 10px;
     padding: 2%;
     margin-top: 5%;
 }
-.answerCalc
-{
+
+.answerCalc {
     font-weight: bold;
     font-size: 130%;
 }
+
 .comb {
     margin-left: auto;
     margin-right: auto;
@@ -85,11 +84,10 @@
     .elementComb {
         float: left;
     }
-    .answerCalc
-{
-    font-weight: bold;
-    font-size: 90%;
-}
+    .answerCalc {
+        font-weight: bold;
+        font-size: 90%;
+    }
 }
 
 @media (max-width: 420px) {

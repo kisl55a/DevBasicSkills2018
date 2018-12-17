@@ -1,32 +1,19 @@
-.truthtable{
+.truthtable {
     width: 70%;
     height: 50%;
     font-size: 150%;
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
-
 }
-@media(max-width:500px)
-{
-    .truthtable{
+
+@media(max-width:500px) {
+    .truthtable {
         width: 70%;
         height: 50%;
         font-size: 100%;
         border: 1px solid black;
         margin-left: auto;
         margin-right: auto;
-    
-    }  
+    }
 }
-
-
-    
-
-
-    
-    
-    
-    
-
-

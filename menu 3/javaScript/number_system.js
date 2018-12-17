@@ -1,3 +1,5 @@
+//This function converts numbers from decimal system 
+//to user input returning the result of convertion
 function table(t, i) {
     var k;
     k = (t.toString(i));
@@ -5,6 +7,7 @@ function table(t, i) {
 
     return (k);
 }
+//This function hides or show table depending on the button
 function turnOn() {
     if (document.getElementById('checkButton').textContent == 'Show') {
         document.getElementById('table').style.visibility = 'visible';

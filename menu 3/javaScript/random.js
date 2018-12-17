@@ -1,6 +1,8 @@
+//This function creates a random value in the certain range
 function getRandomInt(min, max) { min++;
         return Math.floor(Math.random() * (max - min)) + min;
 }
+//This function checks if the number is prime
 function isPrime(a) {
     if (a < 2) return false;
     for (var i = 2; i < a; i++) {
@@ -9,6 +11,8 @@ function isPrime(a) {
     }
     return true;
 }
+//This function gets the values from the user, creates an array
+//of random values and creates two statistics tables.
 function Random() {
     a = Number(document.getElementById("firstRange").value);
     b = Number(document.getElementById("secondRange").value);

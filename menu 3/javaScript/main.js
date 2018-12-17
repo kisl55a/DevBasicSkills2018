@@ -1,5 +1,6 @@
+//This function changes the content of the page depending on pressed button
 function openPage(pageName, elmnt, color) {
-    // Hide all elements with class="tabcontent" by default */
+    // Hide all elements with class="tabcontent" by default
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {

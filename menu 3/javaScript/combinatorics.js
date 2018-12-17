@@ -1,13 +1,12 @@
-
+//This function creates "truth table" and replaces ones with letters
 function combinatorics() {
     a = Number(document.getElementById("combinatoricsSel").value);
 
     var final = [];
     var tab;
     var out = (' ');
-    var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+    var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
     if (a != 0) {
-
         for (i = 1; i <= ((2 ** a) - 1); i++) {
             b = i.toString(2)
             while (b.length < (a + 1)) { b = '0' + b }
@@ -18,7 +17,6 @@ function combinatorics() {
                 final.push(farr);
             }
         }
-
     }
     else { final = " " }
     tab = "<table class='combinatoricsTable '><tr>";
@@ -34,6 +32,7 @@ function combinatorics() {
     document.getElementById('combinatoricsOutput').innerHTML = tab;
 
 }
+//This function iterates over all possible repetitions
 function allVariants() {
     i = Number(document.getElementById("allVarVariants").value);
     if (i != 0) {
@@ -90,26 +89,20 @@ function allVariants() {
         document.getElementById('allVarOutput').innerHTML = (' ');
     }
 }
-
+//This function counts factorial of a number
 function Fact(number) {
-
     var value = number;
-
     for (var i = number; i > 1; i--)
-
         value *= i - 1;
-
     return value;
-
 };
 
 
-
+//This function calculates nCr or nPr 
 function nCr() {
     i = Number(document.getElementById("calculatorSel").value);
     var n = document.getElementById("n").value;
     var k = document.getElementById("k").value;
-
     if (i == 0) {
         if (n == k) {
             var sum = Fact(n)
@@ -142,16 +135,5 @@ function nCr() {
         document.getElementById('calculatorOutput').innerHTML = sum;
     }
 }
-function choose() {
-    i = Number(document.getElementById("combSelMain").value);
-    if (i == 0) {
-        document.getElementsByid('combinatoricsOutput').style.visibility = 'visible';
-        document.getElementsByid('allVarOutput').style.visibility = 'hidden';
 
-    }
-    if (i == 1) {
-        document.getElementsByid('combinatoricsOutput').style.visibility = 'hidden';
-        document.getElementsByid('allVarOutput').style.visibility = 'visible';
-    }
-}
 

@@ -44,7 +44,6 @@
   font-size: 150%;
 }
 
-
 @media (max-width: 600px) {
   .randomInputTable {
     font-size: 100%;
@@ -53,4 +52,3 @@
     font-size: 100%
   }
 }
-

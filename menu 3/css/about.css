@@ -1,0 +1,21 @@
+.aboutUs {
+  font-size: 150%;
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Happy {
+  text-align: center;
+}
+
+@media(max-width:500px) {
+  .aboutUs {
+    font-size: 120%;
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
